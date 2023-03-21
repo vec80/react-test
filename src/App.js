@@ -1,26 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Stage, Text } from '@inlet/react-pixi'
+import { TextStyle } from 'pixi.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Stage>
+      <Text text="Hello World" x={100} y={100} style={new TextStyle({fill:'white'})}/>
+    </Stage>
+  )
 }
-
 export default App;
